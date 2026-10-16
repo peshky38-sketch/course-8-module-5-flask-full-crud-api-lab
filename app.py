@@ -110,11 +110,8 @@ def delete_event(event_id):
     events.remove(event)
 
     # TODO: Task 4 - Return and Handle Results
-    # Return a confirmation and the deleted event
-    return jsonify({
-        "message": "Event deleted successfully",
-        "event": event.to_dict()
-    }), 200
+    # A successful delete has no response body
+    return "", 204
 
 
 if __name__ == "__main__":
